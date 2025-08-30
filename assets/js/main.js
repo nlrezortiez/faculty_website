@@ -21,6 +21,7 @@
   }
   headerToggleBtn.addEventListener('click', headerToggle);
 
+
   /**
    * Hide mobile nav on same-page/hash links
    */

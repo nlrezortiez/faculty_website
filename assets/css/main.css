@@ -1,11 +1,3 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -76,6 +68,13 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+
+/* hide page scrollbar */
+html { scrollbar-width: none; } /* Firefox */
+body { -ms-overflow-style: none; } /* IE and Edge */
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+/* end hide page scrollbar */
+
 
 a {
   color: var(--accent-color);
@@ -640,12 +639,12 @@ section,
 
 .about h2{
   font-weight: 700;
-  font-size: 22px;
-  color: white;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
 }
 
 .about p {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .about .content ul {
@@ -670,22 +669,6 @@ section,
   line-height: 0;
 }
 
-.about::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  background: url("/assets/img/back_2.jpg") no-repeat center center;
-  background-size: cover;
-  filter: blur(3px);       /* лёгкое размытие */
-  transform: scale(1.1);   /* чтобы убрать размытие по краям */
-  z-index: 0;
-  opacity: 0.8;            /* прозрачность, чтобы контент не сливался */
-}
-
-.about > .container {
-  position: relative;
-  z-index: 1; /* контент поверх фона */
-}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -875,7 +858,6 @@ section,
   z-index: 3;
   transition: all ease-in-out 0.3s;
   background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
@@ -902,7 +884,7 @@ section,
 .portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
-  left: calc(50% - 40px);
+  left: calc(50% - 14px);
   font-size: 26px;
   top: calc(50% - 14px);
   color: #fff;
@@ -1304,11 +1286,4 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
